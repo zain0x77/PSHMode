@@ -2,15 +2,15 @@
   "PACKAGES": {
     "pip3": {
       "termux": [
-        "pip3 install --upgrade pip"
+        "pip3.9 install --upgrade pip"
       ],
       "linux": [
-        "sudo apt install python3-pip",
-        "pip3 install --upgrade pip"
+        "sudo apt install python3.9-pip",
+        "pip3.9 install --upgrade pip"
       ],
       "ish shell": [
         "apk add py3-pip",
-        "pip3 install --upgrade pip"
+        "pip3.9 install --upgrade pip"
       ]
     },
     "gcc": {
@@ -60,7 +60,7 @@
         "apk add openssl"
       ]
     },
-    "tree":{
+    "tree": {
       "termux": [
         "pkg install tree"
       ],
@@ -71,7 +71,7 @@
         "apk add tree"
       ]
     },
-    "cmake":{
+    "cmake": {
       "termux": [
         "pkg install cmake"
       ],
@@ -82,7 +82,7 @@
         "apk add cmake"
       ]
     },
-    "make":{
+    "make": {
       "termux": [
         "pkg install make"
       ],
@@ -94,7 +94,6 @@
       ]
     }
   },
-
   "PYTHON3_MODULES": [
     "N4Tools",
     "rich",
