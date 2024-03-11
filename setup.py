@@ -22,7 +22,7 @@ class HackerModeInstaller:
     def python_system_modules(self) -> list:
         """this
         function return all modules that installed in system."""
-        return os.popen("pip3 freeze").read().split("\n")
+        return os.popen("pip3.9 freeze").read().split("\n")  # Change to pip3.9
 
     def is_installed(self, module, python_modules):
         for python_module in python_modules:
@@ -96,7 +96,7 @@ class HackerModeInstaller:
         # install modules
         for module in need_to_install["modules"]:
             print(f"Installing {module} ...")
-            os.system(f"pip3 install {module} 2>> {logout}")
+            os.system(f"pip3.9 install {module} 2>> {logout}")  # Change to pip3.9
 
         # setup PSHMode tools
         self.install_tools_packages()
@@ -175,3 +175,4 @@ class HackerModeInstaller:
                 if os.path.exists(os.path.join(root, dir, "setup.sh")):
                     print(f"Installing {dir} packages...")
                     run_setup(root, dir)
+
