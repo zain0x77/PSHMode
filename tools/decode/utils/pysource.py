@@ -123,8 +123,3 @@ class DecompileMarshal:
 def check(filename) -> bool:
     std = Popen(["check-hash", filename], stdout=PIPE, stderr=PIPE)
     out = std.stdout.read().decode()
-    if out:
-        console.print(f'# encode type: [red]{out.split(": ")[-1][:-1]}[/red]')
-        console.print("# This file cannot be decrypted because it uses our encryption.")
-        return True
-    return False
